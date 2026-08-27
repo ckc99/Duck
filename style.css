@@ -308,7 +308,8 @@ nav a:hover{ color: var(--seal); }
   position: relative;
   z-index: 2;
   height: 100%;
-  max-width: 560px;
+  width: 100%;
+  max-width: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -601,7 +602,7 @@ footer{
     max-width: 92%;
     padding: 3rem clamp(1.5rem, 6vw, 5rem);
   }
-  .hero-title-img{ margin: auto auto 0; width: clamp(200px, 55vw, 340px); }
+  .hero-title-img{ margin: auto auto 0; width: clamp(320px, 88vw, 560px); }
 
   .journey{
     grid-template-columns: 1fr;
@@ -617,14 +618,13 @@ footer{
   .journey-duckie{ width: clamp(38px, 10vw, 52px); }
   .journey-stats{ justify-content: center; }
 
-  .slide-inner{ text-align: center; align-items: center; justify-content: flex-start; margin: 0 auto; padding-left: clamp(1.5rem, 6vw, 5rem); padding-top: 3rem; }
+  .slider{ min-height: 620px; }
+  .slide-inner{ text-align: center; align-items: center; justify-content: center; margin: 0 auto; padding-left: clamp(1.5rem, 6vw, 5rem); padding-bottom: 3.5rem; }
+  .pill-btn.outline{ padding: .6rem 1.4rem; font-size: .9rem; }
   .slide-duck{
-    opacity: 1;
-    height: 42%;
-    right: 3rem;
-    bottom: .8rem;
-    top: auto;
-    transform: none;
+    position: static;
+    width: clamp(140px, 42vw, 220px);
+    height: auto;
   }
   .origin-cards-track{ gap: 1rem; }
   .origin-card{ flex-basis: calc(100vw - 2 * clamp(1.5rem, 6vw, 5rem)); }
