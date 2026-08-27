@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kampar-free-range-duck.com/sitemap.xml
