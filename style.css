@@ -544,7 +544,7 @@ footer{
   margin-bottom: clamp(3rem, 10vh, 6rem);
 }
 
-.footer-address{ margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: .8rem; }
+.footer-address{ margin: 0; display: flex; flex-direction: column; gap: .5rem; }
 
 .footer-address .label{
   font-family: 'Noto Serif SC', serif;
