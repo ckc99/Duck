@@ -302,7 +302,7 @@ nav a:hover{ color: var(--seal); }
   z-index: 0;
 }
 
-.slide-bg--dim{ opacity: .18; }
+.slide-bg--dim{ opacity: .35; }
 
 .slide-inner{
   position: relative;
@@ -617,7 +617,7 @@ footer{
   .journey-duckie{ width: clamp(38px, 10vw, 52px); }
   .journey-stats{ justify-content: center; }
 
-  .slide-inner{ text-align: center; align-items: center; margin: 0 auto; padding-left: clamp(1.5rem, 6vw, 5rem); }
+  .slide-inner{ text-align: center; align-items: center; justify-content: flex-start; margin: 0 auto; padding-left: clamp(1.5rem, 6vw, 5rem); padding-top: 3rem; }
   .slide-duck{
     opacity: 1;
     height: 42%;
