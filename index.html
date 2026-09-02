@@ -145,7 +145,7 @@
         </div>
       </div>
       <div class="journey-actions">
-        <a class="pill-btn" href="#products">
+        <a class="pill-btn" id="products-btn" href="#products">
           我们的产品
           <img src="assets/icon-arrow-right.svg" alt="" aria-hidden="true">
         </a>
@@ -256,5 +256,12 @@
 
   <script src="https://unpkg.com/lenis/dist/lenis.min.js"></script>
   <script src="main.js" defer></script>
+  <script>
+  document.getElementById("products-btn").addEventListener("click", function () {
+  gtag("event", "button_click", {
+    button_name: "our_products"
+  });
+  });
+</script>
 </body>
 </html>
