@@ -452,6 +452,37 @@ h1 {
   letter-spacing: .05em;
 }
 
+.reviews{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(4rem, 9vh, 6rem) 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.reviews-head{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: clamp(2rem, 6vh, 4rem);
+  padding: 0 clamp(1.5rem, 6vw, 5rem);
+}
+
+.reviews-head h2{
+  font-family: 'Noto Serif SC', serif;
+  font-weight: 600;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  color: var(--navy);
+  margin: 0;
+  text-align: center;
+}
+
+.reviews-widget{
+  padding: 0 clamp(1.5rem, 6vw, 5rem);
+}
+
 .origin-cards{
   overflow-x: auto;
   overflow-y: hidden;
