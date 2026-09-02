@@ -129,6 +129,21 @@ nav a:hover{ color: var(--seal); }
   height: auto;
 }
 
+h1 {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+.hero h1.hero-h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .hero-text{
   position: absolute;
   z-index: 1;
@@ -259,6 +274,16 @@ nav a:hover{ color: var(--seal); }
   line-height: 1.35;
   color: var(--navy);
   margin: 0;
+}
+
+.journey-heading p {
+  margin: 1rem 0 0;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--ink-faint);
+  max-width: 500px;
+  margin-left: auto;
 }
 
 .journey-actions{
