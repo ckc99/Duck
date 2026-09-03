@@ -1,9 +1,11 @@
 // ---------- smooth momentum scrolling ----------
+let lenisInstance = null;
 if (typeof Lenis !== 'undefined') {
   const lenis = new Lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   });
+  lenisInstance = lenis;
 
   const raf = (time) => {
     lenis.raf(time);
@@ -25,6 +27,47 @@ if (typeof Lenis !== 'undefined') {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  // ---------- back to top ----------
+  const backToTop = document.getElementById('back-to-top');
+
+  if (backToTop) {
+    const toggleBackToTop = () => {
+      backToTop.classList.toggle('is-visible', window.scrollY > 400);
+    };
+    toggleBackToTop();
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+
+    backToTop.addEventListener('click', () => {
+      if (lenisInstance) {
+        lenisInstance.scrollTo(0);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
+
+  // ---------- mobile nav ----------
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  if (hamburger && mobileNav) {
+    const closeMobileNav = () => {
+      mobileNav.classList.remove('is-open');
+      hamburger.classList.remove('is-active');
+      hamburger.setAttribute('aria-expanded', 'false');
+    };
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('is-open');
+      hamburger.classList.toggle('is-active', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    mobileNav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMobileNav);
+    });
+  }
+
   // ---------- gallery scroll ----------
   const originCards = document.querySelector('.origin-cards');
   const originTrack = document.querySelector('.origin-cards-track');

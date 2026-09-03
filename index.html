@@ -100,11 +100,21 @@
 <body>
 
   <header>
+    <button class="hamburger" id="hamburger-btn" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
     <a class="logo-group" href="#top">
       <img class="logo-icon" src="assets/duck-logo.webp" alt="金宝山水鸭">
       <span class="logo">金宝山水鸭</span>
     </a>
-    <nav></nav>
+    <nav>
+      <a href="#top">首页</a>
+      <a href="about.html">关于我们</a>
+    </nav>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#top">首页</a>
+      <a href="about.html">关于我们</a>
+    </div>
   </header>
 
   <main id="top">
@@ -243,18 +253,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ---------- REVIEWS ---------- -->
-    <section class="reviews" id="reviews">
-      <div class="reviews-head">
-        <h2>顾客真实评价</h2>
-      </div>
-      <div class="reviews-widget">
-        <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-        <script src="https://elfsightcdn.com/platform.js" async></script>
-        <div class="elfsight-app-5db54d14-ddb6-4c9c-bba3-e5cf3ade977a" data-elfsight-app-lazy></div>
-      </div>
-    </section>
   </main>
 
   <footer id="contact">
@@ -280,6 +278,10 @@
     <a href="privacy.html">Privacy Policy</a>
     </p>
   </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="回到顶部">
+    <img src="assets/icon-arrow-right.svg" alt="">
+  </button>
 
   <script src="https://unpkg.com/lenis/dist/lenis.min.js"></script>
   <script src="main.js" defer></script>
