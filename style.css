@@ -295,6 +295,21 @@ nav a:hover{ color: var(--seal); }
   transform: translateX(-1rem);
 }
 
+.hero-supplier-note{
+  margin: 0;
+  max-width: 260px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(.85rem, 1.4vw, .95rem);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+.hero-supplier-note strong{
+  color: var(--navy);
+  font-weight: 600;
+}
+
 .hero-slogan{
   margin: 0;
   max-width: 260px;
@@ -715,6 +730,21 @@ nav a:hover{ color: var(--seal); }
   color: rgba(249, 246, 240, .85);
 }
 
+.about-video{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: clamp(3rem, 8vh, 5rem) clamp(1.5rem, 6vw, 5rem) clamp(3rem, 8vh, 5rem);
+}
+
+.about-video iframe{
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
 .about-story{
   position: relative;
   z-index: 2;
@@ -740,7 +770,7 @@ nav a:hover{ color: var(--seal); }
   text-align: center;
 }
 
-.about-story-text .section-label{
+.section-label{
   display: block;
   font-style: italic;
   letter-spacing: .1em;
@@ -839,6 +869,8 @@ nav a:hover{ color: var(--seal); }
 }
 
 .about-locations .gallery-head{ margin-bottom: 1rem; }
+.about-locations .gallery-head .en{ flex-basis: 100%; text-align: center; }
+.gallery .gallery-head .en{ flex-basis: 100%; text-align: center; }
 
 .about-locations-intro{
   max-width: 700px;
@@ -943,8 +975,9 @@ footer{
 .footer-address .value{
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 1rem;
-  color: rgba(249, 246, 240, .6);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(249, 246, 240, .9);
 }
 
 .footer-icons{ display: flex; gap: 1.1rem; }
@@ -981,12 +1014,14 @@ footer{
 }
 
 @media (max-width: 860px){
+  .hero{ min-height: 72vh; }
   .hero-text{ max-width: 92%; }
   .hero-duck{ width: clamp(200px, 50vw, 300px); }
   .hero-brand-line-kampar{ transform: translateX(-3rem); }
-  .hero-corner{ right: 1.2rem; bottom: 1.2rem; }
+  .hero-corner{ right: 1.2rem; bottom: 1.2rem; max-width: 220px; }
   .hero-slogan{ max-width: 180px; font-size: .9rem; }
   .hero-since{ font-size: .8rem; }
+  .hero-supplier-note{ max-width: 180px; font-size: .8rem; }
 
   .journey{
     grid-template-columns: 1fr;
