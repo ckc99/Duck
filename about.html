@@ -43,6 +43,60 @@
       "description": "金宝山水鸭的故事——依山傍水的天然环境，坚持自然放养，养出肉质紧实、皮薄油润的好鸭子，服务巴生谷、金宝与怡保全区。",
       "about": { "@id": "https://kampar-free-range-duck.com/#organization" },
       "isPartOf": { "@id": "https://kampar-free-range-duck.com/#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://kampar-free-range-duck.com/about.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "金宝山水鸭提供批发服务吗？Do you supply duck wholesale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "金宝山水鸭长期为烧腊店、餐厅、酒楼、湿巴刹与零售商提供稳定的鲜鸭批发供应，自2016年起服务至今。Yes — we've supplied fresh duck wholesale to roast duck shops, restaurants, retailers and wet markets since 2016."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "你们配送到哪些地区？Which areas do you deliver to?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "我们从金宝鸭场直接配送，服务怡保(Ipoh)、金宝(Kampar)与巴生谷(吉隆坡、巴生、八打灵、梳邦)全区。We deliver directly from our Kampar farm to Ipoh, Kampar and the Klang Valley (KL, Klang, PJ, Subang)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "零售顾客可以直接跟你们购买吗？Can retail customers order directly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以，无论零售或批发订单，金宝山水鸭都提供稳定的鲜鸭供应。Yes — we supply both retail and wholesale orders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "你们的鸭子是如何养殖的？How are your ducks raised?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "我们坚持自然放养，鸭苗从孵化起便在开阔的山水环境中自由活动、戏水，养殖周期约50天以上。Our ducks are raised free-range in Kampar, with open space to roam and swim, over a growing cycle of 50+ days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "你们的鸭子适合什么料理？What dishes suit your duck?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "紧实细嫩的肉质与均匀分布的皮下脂肪，特别适合烧鸭、卤鸭、姜母鸭与潮州卤水鸭等经典料理。Great for classic dishes like roast duck, braised duck, ginger duck and Teochew braised duck."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如何联系订购或索取批发报价？How do I place an order or get a wholesale quote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "欢迎透过 WhatsApp 联系我们，无论零售或批发订单，我们都会尽快回复。Contact us via WhatsApp — for retail or wholesale enquiries, we'll respond promptly."
+          }
+        }
+      ]
     }
   ]
 }
@@ -65,7 +119,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Alkatra:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,600&family=Alkatra:wght@400;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,600&family=Alkatra:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,600&family=Alkatra:wght@400;600&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="style.css">
 
 </head>
@@ -92,16 +148,15 @@
   <main id="top">
     <!-- ---------- ABOUT HERO ---------- -->
     <section class="about-hero">
-      <img class="about-hero-bg" src="assets/slide1-drone.webp" alt="" aria-hidden="true">
+      <img class="about-hero-bg" src="assets/slide1-drone.webp" alt="依山傍水的金宝鸭场环境" fetchpriority="high">
       <div class="about-hero-text">
         <span class="en">About Kampar Free Range Duck</span>
         <h1>关于金宝山水鸭</h1>
-        <p>好山好水育好鸭</p>
       </div>
     </section>
 
     <div class="about-video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/qb2JAEoMj5w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/qb2JAEoMj5w" title="YouTube video player" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
 
@@ -112,9 +167,11 @@
         <h2>金宝山水鸭：寻山问水，铸就纯正品质</h2>
         <p>金宝山水鸭致力于提供最高标准的天然生态鲜鸭。我们深信「得有山又有水，鸭子才有好油水。」的传统智慧，因此坚持让鸭群远离拥挤的商业圈养，在清泉流淌、自然开阔的环境中自由放养。这种原生态的生长模式，造就了鸭肉紧实细嫩的口感与分布均匀的黄金皮下脂肪，使其成为专业烧腊师傅与高级餐厅不可或缺的顶级食材。</p>
         <p>为了确保每一份食材都能达到食品行业的最高标准，金宝山水鸭坚持源头直供，直接对标业内最值得信赖的批发供应商体系。我们深知新鲜、安全的食材是餐饮业成功的基石，因此每一批山水鸭都经过精心筛选，确保交到零售商、餐饮服务商和家庭顾客手中的产品，始终保持着卓越的新鲜度与一致性。</p>
+        <p class="en-p">Kampar Free Range Duck is committed to the highest standard of naturally raised fresh duck. We hold to the traditional wisdom that good mountains and good water make good duck, which is why our ducks are never kept in crowded commercial pens — instead, they roam freely across open, spring-fed surroundings. This natural rearing method produces duck with firm, tender meat and an even layer of golden fat beneath the skin, making it a prized ingredient for professional roast duck chefs and fine restaurants.</p>
+        <p class="en-p">To ensure every batch meets the highest standards in the food industry, Kampar Free Range Duck supplies directly from the source, positioning ourselves among the most trusted names in the wholesale supply chain. We know that fresh, safe ingredients are the foundation of a successful food business, so every batch is carefully selected — ensuring retailers, foodservice partners and home customers alike receive duck of consistently excellent freshness and quality.</p>
       </div>
       <div class="about-story-media">
-        <img src="assets/page2.webp" alt="金宝山水中鸭">
+        <img src="assets/page2.webp" alt="金宝山水中鸭" loading="lazy">
       </div>
     </section>
 
@@ -127,9 +184,13 @@
         <p>除了自然环境，我们也为鸭群搭配专属饲料配方，确保营养均衡、生长稳定。从鸭苗到成鸭，整个养殖周期约50天以上，我们全程关注鸭群的健康与生长环境，确保每一批交付的山水鸭都维持一致的品质与新鲜度。</p>
         <p>我们的鸭场坐落于霹雳金宝(Kampar)，我们从产地直接配送，服务吉隆坡(KL)、怡保(Ipoh)、金宝(Kampar)与雪兰莪(Selangor)全区的零售与批发客户。</p>
         <p>紧实细嫩的肉质与均匀分布的皮下脂肪，让金宝山水鸭特别适合各种经典料理，例如烧鸭、卤鸭、姜母鸭与潮州卤水鸭，无论是家庭烹饪或餐饮业者的招牌菜，都能呈现皮脆肉嫩、锁汁多汁的效果。</p>
+        <p class="en-p">Kampar Free Range Duck follows traditional free-range farming. From the moment they hatch, our ducklings roam freely across open hills and waterways, never confined to crowded pens. With daily space to walk and swim, the flock stays healthy and well-muscled — giving the meat its firm, springy texture.</p>
+        <p class="en-p">Beyond the natural environment, we also use a dedicated feed formula to keep nutrition balanced and growth steady. From duckling to maturity, the full rearing cycle takes 50+ days, during which we closely monitor the flock's health and living conditions — ensuring every batch we deliver maintains the same quality and freshness.</p>
+        <p class="en-p">Our farm is based in Kampar, Perak, and we deliver directly from the source to retail and wholesale customers across Kuala Lumpur (KL), Ipoh, Kampar and Selangor.</p>
+        <p class="en-p">The firm, tender meat and evenly distributed fat under the skin make Kampar Free Range Duck ideal for classic dishes such as roast duck, braised duck, ginger duck and Teochew braised duck — delivering crispy skin, tender meat and juicy results, whether cooked at home or served as a restaurant signature dish.</p>
       </div>
       <div class="about-story-media">
-        <img src="assets/专属饲料.webp" alt="鸭子专属饲料">
+        <img src="assets/专属饲料.webp" alt="鸭子专属饲料" loading="lazy">
       </div>
     </section>
 
@@ -145,9 +206,76 @@
           <li>产地源头直发，规格统一，常年货源充足</li>
         </ul>
         <p>查看我们的<a href="index.html#products">产品选择</a>，或欢迎餐饮业者与零售商联系我们，洽谈长期批发合作方案。</p>
+        <p class="en-p">Beyond retail customers, Kampar Free Range Duck has long supplied roast duck shops, restaurants, hotels, wet markets and retailers with steady wholesale supply. We understand that volume and reliability matter most in the food and retail trade — so regardless of order size, every batch is held to the same quality standard, ensuring consistent freshness and specification with every delivery.</p>
+        <ul class="en-p">
+          <li>Suited to a wide range of roasting, braising and cooking needs</li>
+          <li>The right ratio of subcutaneous fat for crispy skin, tender meat and perfectly sealed juices when roasted</li>
+          <li>Shipped directly from the source, with consistent specification and year-round supply</li>
+        </ul>
+        <p class="en-p">See our range of products, or get in touch to discuss a long-term wholesale partnership for your restaurant or retail business.</p>
       </div>
       <div class="about-story-media">
-        <img src="assets/duckssss.webp" alt="批发包装鸭肉">
+        <img src="assets/duckssss.webp" alt="批发包装鸭肉" loading="lazy">
+      </div>
+    </section>
+
+    <!-- ---------- FAQ ---------- -->
+    <section class="about-faq">
+      <div class="gallery-head">
+        <h2>常见问题</h2>
+        <span class="en">Frequently Asked Questions</span>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q-zh">金宝山水鸭提供批发服务吗？</span>
+            <span class="faq-q-en">Do you supply duck wholesale?</span>
+          </summary>
+          <div class="faq-a">
+            <p>金宝山水鸭长期为烧腊店、餐厅、酒楼、湿巴刹与零售商提供稳定的鲜鸭批发供应，自2016年起服务至今。</p>
+            <p class="faq-a-en">Yes. We supplied fresh duck wholesale to roast duck shops, restaurants, retailers and wet markets since 2016.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q-zh">你们配送到哪些地区？</span>
+            <span class="faq-q-en">Which areas do you deliver to?</span>
+          </summary>
+          <div class="faq-a">
+            <p>我们从金宝鸭场直接配送，服务怡保(Ipoh)、金宝(Kampar)与巴生谷(吉隆坡、巴生、八打灵、梳邦)全区。</p>
+            <p class="faq-a-en">We deliver directly from our Kampar farm to Ipoh, Kampar and the Klang Valley (KL, Klang, PJ, Subang).</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q-zh">零售顾客可以直接跟你们购买吗？</span>
+            <span class="faq-q-en">Can retail customers order directly?</span>
+          </summary>
+          <div class="faq-a">
+            <p>可以，无论零售或批发订单，金宝山水鸭都提供稳定的鲜鸭供应。</p>
+            <p class="faq-a-en">Yes, we supply both retail and wholesale orders.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q-zh">你们的鸭子是如何养殖的？</span>
+            <span class="faq-q-en">How are your ducks raised?</span>
+          </summary>
+          <div class="faq-a">
+            <p>我们坚持自然放养，鸭苗从孵化起便在开阔的山水环境中自由活动、戏水，养殖周期约50天以上。</p>
+            <p class="faq-a-en">Our ducks are raised free-range in Kampar, with open space to roam and swim, over a growing cycle of 50+ days.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span class="faq-q-zh">你们的鸭子适合什么料理？</span>
+            <span class="faq-q-en">What dishes suit your duck?</span>
+          </summary>
+          <div class="faq-a">
+            <p>紧实细嫩的肉质与均匀分布的皮下脂肪，特别适合烧鸭、卤鸭等经典料理。</p>
+            <p class="faq-a-en">Great for classic dishes like roast duck, braised duck, and so on.</p>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -155,6 +283,7 @@
     <section class="about-cta">
       <h2>想品尝新鲜山水鸭？</h2>
       <p>欢迎透过 WhatsApp 联系我们，了解更多产品与订购详情。</p>
+      <p class="en-p">Contact Us.</p>
       <a class="pill-btn"
       href="https://wa.me/60122295012?text=I'm%20interested%20in%20kampar%20free-range%20duck.%20https://kampar-free-range-duck.com/"
       target="_blank"
@@ -170,16 +299,16 @@
         <br>📍No. 47, Lorong Sanggul 1D, Bandar Puteri, 41200 Klang, Selangor, Malaysia.</span></p>
       <div class="footer-icons">
         <a href="mailto:kchong026@gmail.com" aria-label="Email">
-          <img src="assets/icon-email.svg" alt="邮件">
+          <img src="assets/icon-email.svg" alt="邮件" loading="lazy">
         </a>
         <a href="https://wa.me/60122295012" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <img src="assets/icon-waicon.webp" alt="Whatsapp">
+          <img src="assets/icon-waicon.webp" alt="Whatsapp" loading="lazy">
         </a>
         <a href="https://www.instagram.com/freerangeduck.kampar/" target="_blank" rel="noopener" aria-label="Instagram">
-          <img src="assets/ins-icon.webp" alt="Instagram">
+          <img src="assets/ins-icon.webp" alt="Instagram" loading="lazy">
         </a>
         <a href="https://www.facebook.com/profile.php?id=61594035502925" target="_blank" rel="noopener" aria-label="Facebook">
-          <img src="assets/f-icon.webp" alt="Facebook">
+          <img src="assets/f-icon.webp" alt="Facebook" loading="lazy">
         </a>
       </div>
     </div>
@@ -190,10 +319,10 @@
   </footer>
 
   <button class="back-to-top" id="back-to-top" type="button" aria-label="回到顶部">
-    <img src="assets/icon-arrow-right.svg" alt="">
+    <img src="assets/icon-arrow-right.svg" alt="" loading="lazy">
   </button>
 
-  <script src="https://unpkg.com/lenis/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lenis/dist/lenis.min.js" defer></script>
   <script src="main.js" defer></script>
   <script>
   document.getElementById("about-cta-btn").addEventListener("click", function () {

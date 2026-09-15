@@ -100,7 +100,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Alkatra:wght@400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,600&family=Alkatra:wght@400;600&family=Montserrat:wght@500;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,600&family=Alkatra:wght@400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,600&family=Alkatra:wght@400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="style.css">
 
 </head>
@@ -127,7 +129,7 @@
   <main id="top">
     <!-- ---------- HERO / INTRO ---------- -->
     <section class="hero">
-      <img class="hero-duck" src="assets/slide1-duckie.webp" alt="" aria-hidden="true">
+      <img class="hero-duck" src="assets/slide1-duckie.webp" alt="自然放养的金宝山水鸭" fetchpriority="high">
       <div class="hero-text">
         <h1 class="hero-brand-en">
           <span class="visually-hidden">金宝山水鸭 </span>
@@ -175,9 +177,9 @@
       <div class="journey-actions">
         <a class="pill-btn" id="products-btn" href="#products">
           我们的产品
-          <img src="assets/icon-arrow-right.svg" alt="" aria-hidden="true">
+          <img src="assets/icon-arrow-right.svg" alt="" aria-hidden="true" loading="lazy">
         </a>
-        <img class="journey-duckie" src="assets/video-duckie.webp" alt="嬉水的小鸭子">
+        <img class="journey-duckie" src="assets/video-duckie.webp" alt="嬉水的小鸭子" loading="lazy">
       </div>
     </section>
 
@@ -185,11 +187,11 @@
     <section class="products" id="products">
       <div class="slider">
         <div class="slide is-active" data-slide="0">
-          <img class="slide-bg slide-bg--dim" src="assets/duckssss.webp" alt="稳定货源">
+          <img class="slide-bg slide-bg--dim" src="assets/duckssss.webp" alt="稳定货源" loading="lazy">
           <div class="slide-inner">
             <h3>鲜切整鸭</h3>
             <p>便于烹调，锁住鲜味本色</p>
-            <img class="slide-duck" src="assets/slide2-packaged-duck.webp" alt="鸭肉分切">
+            <img class="slide-duck" src="assets/slide2-packaged-duck.webp" alt="鸭肉分切" loading="lazy">
             <a class="pill-btn outline"
             href="https://wa.me/60122295012?text=I'm%20interested%20in%20kampar%20free-range%20duck%20https://kampar-free-range-duck.com/"
             target="_blank"
@@ -198,11 +200,11 @@
           </div>
         </div>
         <div class="slide" data-slide="1">
-          <img class="slide-bg slide-bg--dim" src="assets/slide-2.webp" alt="鸭子批发">
+          <img class="slide-bg slide-bg--dim" src="assets/slide-2.webp" alt="鸭子批发" loading="lazy">
           <div class="slide-inner">
             <h3>马来西亚鸭子批发商</h3>
             <p>长期稳定供应，服务全马烧腊店、餐厅与零售商</p>
-            <img class="slide-duck" src="assets/slide1-duckie.webp" alt="鲜鸭全禽">
+            <img class="slide-duck" src="assets/slide1-duckie.webp" alt="鲜鸭全禽" loading="lazy">
             <a class="pill-btn outline"
             href="https://wa.me/60122295012?text=I'm%20interested%20in%20kampar%20free-range%20duck.%20https://kampar-free-range-duck.com/"
             target="_blank"
@@ -216,10 +218,10 @@
           <button class="dot" data-dot="1" aria-label="马来西亚鸭子批发商"></button>
         </div>
         <button class="slider-arrow slider-arrow--prev" aria-label="上一张">
-          <img src="assets/icon-arrow-right.svg" alt="" aria-hidden="true">
+          <img src="assets/icon-arrow-right.svg" alt="" aria-hidden="true" loading="lazy">
         </button>
         <button class="slider-arrow slider-arrow--next" aria-label="下一张">
-          <img src="assets/icon-arrow-right.svg" alt="" aria-hidden="true">
+          <img src="assets/icon-arrow-right.svg" alt="" aria-hidden="true" loading="lazy">
         </button>
       </div>
     </section>
@@ -230,7 +232,8 @@
         <h2>服务范围</h2>
         <span class="en">Duck Supplier Coverage</span>
       </div>
-      <p class="about-locations-intro">无论零售顾客或批发订单，金宝山水鸭都为烧腊店、餐厅、酒楼、湿巴刹与零售商提供稳定的鲜鸭批发供应，新鲜配送服务涵盖以下地区，持续为客户与合作伙伴提供充足稳定的货源。</p>
+      <p class="about-locations-intro">无论零售顾客或批发订单，金宝山水鸭都为烧腊店、餐厅、酒楼、湿巴刹与零售商提供稳定的鲜鸭批发供应。我们从金宝鸭场直接配送新鲜整鸭与鲜切鸭肉，确保货源稳定、规格一致，持续为客户与合作伙伴提供充足新鲜的鸭子供应。</p>
+      <p class="about-locations-intro-en">As a trusted duck supplier and wholesaler in Malaysia, Kampar Free Range Duck delivers fresh whole duck and duck cuts to restaurants, roast duck shops, wet markets and retailers — with reliable duck wholesale and meat wholesale supply across the areas below.</p>
       <div class="locations-grid">
         <div class="location-card">
           <div class="location-icon">
@@ -238,6 +241,7 @@
           </div>
           <h3>怡保 Ipoh</h3>
           <p>近打(Kinta)、万里望(Menglembu) </p>
+          <p class="location-en">Duck wholesale &amp; fresh delivery across Ipoh and the greater Kinta district.</p>
         </div>
         <div class="location-card">
           <div class="location-icon">
@@ -245,6 +249,7 @@
           </div>
           <h3>金宝 Kampar</h3>
           <p>霹雳(Perak)，鸭场所在地</p>
+          <p class="location-en">Our farm is based here in Kampar, Perak — the source of every fresh duck we supply.</p>
         </div>
         <div class="location-card">
           <div class="location-icon">
@@ -252,6 +257,7 @@
           </div>
           <h3>巴生谷 Klang Valley</h3>
           <p>吉隆坡(KL)、巴生(Klang)、八打灵(PJ)、梳邦(Subang)</p>
+          <p class="location-en">Duck supplier and wholesaler serving KL, Klang, PJ &amp; Subang restaurants and retailers.</p>
         </div>
       </div>
     </section>
@@ -267,7 +273,7 @@
         <div class="origin-cards-track">
           <div class="origin-card">
             <div class="frame">
-              <img src="assets/自然放养.webp" alt="自然放养">
+              <img src="assets/自然放养.webp" alt="自然放养" loading="lazy">
               <div class="card-caption">
                 <span class="badge">1</span>
                 <h3>自然放养</h3>
@@ -276,7 +282,7 @@
           </div>
           <div class="origin-card">
             <div class="frame">
-              <img src="assets/自由走动.webp" alt="自由走动">
+              <img src="assets/自由走动.webp" alt="自由走动" loading="lazy">
               <div class="card-caption">
                 <span class="badge">2</span>
                 <h3>自由走动</h3>
@@ -285,7 +291,7 @@
           </div>
           <div class="origin-card">
             <div class="frame">
-              <img src="assets/专属饲料.webp" alt="专属饲料">
+              <img src="assets/专属饲料.webp" alt="专属饲料" loading="lazy">
               <div class="card-caption">
                 <span class="badge">3</span>
                 <h3>专属饲料</h3>
@@ -294,7 +300,7 @@
           </div>
           <div class="origin-card">
             <div class="frame">
-              <img src="assets/slide1-drone.webp" alt="山水游养">
+              <img src="assets/slide1-drone.webp" alt="山水游养" loading="lazy">
               <div class="card-caption">
                 <span class="badge">4</span>
                 <h3>山水游养</h3>
@@ -313,16 +319,16 @@
         <br>📍No. 47, Lorong Sanggul 1D, Bandar Puteri, 41200 Klang, Selangor, Malaysia.</span></p>
       <div class="footer-icons">
         <a href="mailto:kchong026@gmail.com" aria-label="Email">
-          <img src="assets/icon-email.svg" alt="邮件">
+          <img src="assets/icon-email.svg" alt="邮件" loading="lazy">
         </a>
         <a href="https://wa.me/60122295012" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <img src="assets/icon-waicon.webp" alt="Whatsapp">
+          <img src="assets/icon-waicon.webp" alt="Whatsapp" loading="lazy">
         </a>
         <a href="https://www.instagram.com/freerangeduck.kampar/" target="_blank" rel="noopener" aria-label="Instagram">
-          <img src="assets/ins-icon.webp" alt="Instagram">
+          <img src="assets/ins-icon.webp" alt="Instagram" loading="lazy">
         </a>
         <a href="https://www.facebook.com/profile.php?id=61594035502925" target="_blank" rel="noopener" aria-label="Facebook">
-          <img src="assets/f-icon.webp" alt="Facebook">
+          <img src="assets/f-icon.webp" alt="Facebook" loading="lazy">
         </a>
       </div>
     </div>
@@ -333,10 +339,10 @@
   </footer>
 
   <button class="back-to-top" id="back-to-top" type="button" aria-label="回到顶部">
-    <img src="assets/icon-arrow-right.svg" alt="">
+    <img src="assets/icon-arrow-right.svg" alt="" loading="lazy">
   </button>
 
-  <script src="https://unpkg.com/lenis/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lenis/dist/lenis.min.js" defer></script>
   <script src="main.js" defer></script>
   <script>
   document.getElementById("products-btn").addEventListener("click", function () {
