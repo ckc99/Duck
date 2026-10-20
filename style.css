@@ -1036,53 +1036,57 @@ nav a:hover{ color: var(--seal); }
   opacity: .7;
 }
 
-.coming-soon{
+.duck-parts{
   position: relative;
   z-index: 2;
-  padding: clamp(3rem, 7vh, 4.5rem) 0 clamp(4rem, 9vh, 6rem);
+  padding: clamp(3rem, 7vh, 4.5rem) clamp(1.5rem, 6vw, 5rem) clamp(4rem, 9vh, 6rem);
 }
 
-.coming-soon .gallery-head{ margin-bottom: clamp(1.8rem, 4vh, 2.6rem); }
+.duck-parts .gallery-head{ margin-bottom: clamp(1.8rem, 4vh, 2.6rem); }
 
-/* centers the row when the cards fit; ignored once they overflow and scroll */
-.soon-cards .origin-cards-track{ margin-inline: auto; }
+.parts-grid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 2.4vw, 1.8rem);
+  max-width: 1240px;
+  margin: 0 auto;
+}
 
-.soon-card{
-  flex: 0 0 clamp(230px, 26vw, 310px);
-  scroll-snap-align: start;
+.part-card{
   display: flex;
   flex-direction: column;
-  padding: clamp(1.3rem, 2.6vw, 1.8rem);
+  padding: clamp(1.1rem, 2.2vw, 1.5rem);
   background: #F9F6F0;
   border-radius: 28px;
 }
 
-.soon-card-media{
+.part-card-media{
   aspect-ratio: 4 / 3;
   margin-bottom: 1.1rem;
   border-radius: 20px;
   background: var(--paper);
+  overflow: hidden;
+}
+
+.part-card-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* logo stand-in until the product photo is ready */
+.part-card-media.is-placeholder{
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.soon-card-media img{
+.part-card-media.is-placeholder img{
   width: 38%;
   height: auto;
   opacity: .22;
 }
 
-.soon-badge{
-  margin: 0 0 .5rem;
-  font-family: 'Lora', serif;
-  font-size: .72rem;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--seal);
-}
-
-.soon-card h3{
+.part-card h3{
   margin: 0 0 .6rem;
   font-family: 'Noto Serif SC', serif;
   font-weight: 600;
@@ -1090,7 +1094,7 @@ nav a:hover{ color: var(--seal); }
   color: var(--navy);
 }
 
-.soon-card h3 .en{
+.part-card h3 .en{
   display: block;
   margin-top: .25rem;
   font-size: .72em;
@@ -1098,20 +1102,34 @@ nav a:hover{ color: var(--seal); }
   color: var(--navy);
 }
 
-.soon-card p{
-  margin: 0;
+.part-card p{
+  margin: 0 0 .4rem;
   font-size: .92rem;
   line-height: 1.8;
   color: var(--ink-soft);
 }
 
-.coming-soon-cta{
-  display: flex;
-  justify-content: center;
-  padding: clamp(2rem, 5vh, 3rem) clamp(1.5rem, 6vw, 5rem) 0;
+.part-card p.en-p{ margin-bottom: 1.1rem; font-size: .85rem; line-height: 1.7; }
+
+.part-enquire{
+  align-self: flex-start;
+  margin-top: auto;
+  padding: .5rem 1.2rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--navy);
+  color: var(--navy);
+  font-family: 'Noto Serif SC', serif;
+  font-size: .88rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  transition: background .3s ease, color .3s ease;
+}
+.part-enquire:hover{
+  background: var(--navy);
+  color: var(--paper);
 }
 
-.coming-soon .about-locations-intro{ margin-top: clamp(1.8rem, 4vh, 2.6rem); }
+.duck-parts .about-locations-intro{ margin-top: clamp(1.8rem, 4vh, 2.6rem); }
 
 .location-card{
   padding: clamp(1.8rem, 3.4vw, 2.6rem);
@@ -1205,7 +1223,7 @@ nav a:hover{ color: var(--seal); }
 
 .about-faq .gallery-head{ margin-bottom: clamp(2rem, 5vh, 3rem); }
 .about-faq .gallery-head .en{ flex-basis: 100%; text-align: center; }
-.coming-soon .gallery-head .en{ flex-basis: 100%; text-align: center; }
+.duck-parts .gallery-head .en{ flex-basis: 100%; text-align: center; }
 
 .faq-list{
   max-width: 760px;
@@ -1271,6 +1289,7 @@ nav a:hover{ color: var(--seal); }
   color: var(--ink);
 }
 .faq-a p:last-child{ margin-bottom: 0; }
+.faq-a a{ color: var(--seal); text-decoration: underline; }
 
 .faq-a-en{
   font-family: 'Lora', serif;
@@ -1325,6 +1344,11 @@ nav a:hover{ color: var(--seal); }
   .product-feature-media,
   .product-feature-body{ grid-column: auto; grid-row: auto; }
   .product-title{ text-align: center; margin-bottom: 1.5rem; }
+  .parts-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 520px){
+  .parts-grid{ grid-template-columns: 1fr; max-width: 360px; }
 }
 
 /* ---------- footer ---------- */
