@@ -244,7 +244,7 @@ const MARKER = /<!-- cms:([a-z-]+)((?: [\w.:-]+)*) -->([\s\S]*?)<!-- \/cms:\1(?:
 // Generic content engine
 // Markers look like  <!-- cms:KIND KEY [OPTIONS] --> … <!-- /cms:KIND KEY [OPTIONS] -->
 // KEY is "documentId.field.subField" in Sanity, e.g. "aboutPage.story2.title".
-//   t       text (Enter = <br>, **bold**, [link](url))   txt   plain text
+//   t       text (Enter = <br>, **bold**, [link](url))   txt   plain text   title  whole <title> tag
 //   attr    sets one attribute on the tag inside          img   photo (src/alt/size)
 //   imgurl  photo URL in a <meta content="…">              paras paragraphs (blank line = new <p>)
 //   pt      rich text (headings, lists, bold, links)       list  repeating items (see LISTS)
@@ -338,6 +338,8 @@ function genericRenderers(d, LISTS, CUSTOM_PT) {
   return {
     t: ([key]) => { const v = val(key); return has(v) ? inlineFmt(v) : null; },
     txt: ([key]) => { const v = val(key); return has(v) ? esc(v) : null; },
+    // <title> cannot contain comments (browsers show them), so this marker wraps the whole tag
+    title: ([key]) => { const v = val(key); return has(v) ? `<title>${esc(v)}</title>` : null; },
     attr: ([key, name], orig) => { const v = val(key); return has(v) ? setAttr(orig, name, String(v)) : null; },
     img: ([key, full], orig) => {
       const img = val(key); const a = assetOf(idx, img);
